@@ -1,0 +1,43 @@
+<html>
+  <table>
+    <tr>
+      <th>Center Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Sessions</th>
+      <th>From</th>
+      <th>To</th>
+    </tr>
+    {{#each centers}}
+      <tr>
+        <td>{{center_id}}</td>
+        <td>{{name}}</td>
+        <td>{{address}}</td>
+        <td>
+          <table>
+            <tr>
+              <th>Session Id</th>
+              <th>Date</th>
+              <th>Available Capacity</th>
+              <th>Age Limit</th>
+              <th>Vaccine</th>
+              <th>Slots</th>
+            </tr>
+              {{#each sessions}}
+                <tr>
+                  <td>{{session_id}}</td>
+                  <td>{{date}}</td>
+                  <td>{{available_capacity}}</td>
+                  <td>{{min_age_limit}}</td>
+                  <td>{{vaccine}}</td>
+                  <td>{{slots}}</td>
+                </tr>
+              {{/each}}
+          </table>
+        </td>
+        <td>{{from}}</td>
+        <td>{{to}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</html>
